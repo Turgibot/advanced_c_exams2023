@@ -1,0 +1,6 @@
+banana 5
+coffee 9
+mango 12
+egg 4
+carrot 7
+tomato 11
