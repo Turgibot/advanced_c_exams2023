@@ -42,7 +42,8 @@ void main()
 		fgets(buffer, 21, fp1);
 		Car* tmp = createCar(buffer);
 		cars[i] = *tmp;
-		
+		free(tmp->manufacturer);
+		free(tmp);
 	}
 	Car* foundCar;
 	if (foundCar = findCar(fp1, 2009)) {
@@ -51,8 +52,13 @@ void main()
 	else{
 		printf("No");
 	}
+	if (foundCar) {
+		free(foundCar->manufacturer);
+		free(foundCar);
+	}
+	free(cars);
 	fclose(fp1);
-	 
+	
 }
 
 
